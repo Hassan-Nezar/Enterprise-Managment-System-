@@ -9,19 +9,25 @@ using namespace std;
 
 class auth_manager {
 public:
+    struct login_result {
+        bool success;
+        std::string first_name;
+        std::string last_name;
+        std::string id;
+        std::string role;
+    };
 
-    struct result_loginparser {
+    struct loginparser_result {
         string firstnamer;
         string lastnamer;
         string id1r; 
-        string id2r;  
+        string id2r;
+        string passr;  
     };
 
-    result_loginparser login_parser(string name, string id);
+    loginparser_result login_parser(string name, string id, string password);
 
-    void accounts_parser();
-
-    void login(string name, string id);
+    login_result login(string name, string id, string password);
 
     void logout();
 };
