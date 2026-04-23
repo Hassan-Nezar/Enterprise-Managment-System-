@@ -76,5 +76,16 @@ public:
         cout << "GPA:         " << gpa << endl;
         cout << "\n--------------------" << endl;
     }
+    void loadFromStream(stringstream& ss) override {
+    string idStr, yearStr, gpaStr;
+    getline(ss, idStr, '|'); u_id = stoll(idStr);
+    getline(ss, u_name, '|');
+    getline(ss, yearStr, '|'); schoolyear = stoi(yearStr);
+    getline(ss, college, '|');
+    getline(ss, major, '|');
+    getline(ss, nationality, '|');
+    getline(ss, gpaStr, '|'); gpa = stod(gpaStr);
+    getline(ss, u_bio);
+}
 };
 

@@ -80,5 +80,15 @@ public:
         cout << "salary:         " << salary << endl;
     cout << "\n--------------------" << endl;
     }
+    void loadFromStream(stringstream& ss) override {
+    string idStr, salStr, rankStr;
+    getline(ss, idStr, '|'); u_id = stoll(idStr);
+    getline(ss, u_name, '|');
+    getline(ss, rankStr, '|'); rank = stoi(rankStr);
+    getline(ss, department, '|');
+    getline(ss, nationality, '|');
+    getline(ss, salStr, '|'); salary = stod(salStr);
+    getline(ss, u_bio);
+}
 };
 

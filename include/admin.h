@@ -44,7 +44,7 @@ public:
     Admin()
     {
         cout << "1- Name: ";
-        cin.ignore(1000,'\n');
+        cin.ignore(1000, '\n');
         getline(cin, u_name);
         cout << "2- ID: ";
         cin >> u_id;
@@ -66,4 +66,13 @@ public:
         cout << "Private key:     " << privatekey << endl;
         cout << "\n--------------------" << endl;
     }
+    void loadFromStream(stringstream& ss) override {
+    string idStr, privStr, salStr;
+    getline(ss, idStr, '|'); u_id = stoll(idStr);
+    getline(ss, u_name, '|');
+    getline(ss, privStr, '|'); privilege = stoi(privStr);
+    getline(ss, salStr, '|'); salary = stod(salStr);
+    getline(ss, privatekey, '|');
+    getline(ss, u_bio);
+}
 };
