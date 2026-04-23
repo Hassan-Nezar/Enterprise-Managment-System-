@@ -1,5 +1,4 @@
-#ifndef COURSE_H
-#define COURSE_H
+#pragma once
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -29,5 +28,3 @@ class course {
 
           
 };
-
-#endif

@@ -1,0 +1,9 @@
+--- Professor Record ---
+Name:        
+ID:          1234
+Rank:        32767
+Department:  Math
+Nationality: 
+Salary:      2500
+Bio:         a fine professor with 19 years of age knowledgeable in various fields
+------------------------

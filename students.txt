@@ -1,0 +1,9 @@
+Name:      islam Taraa
+ID:        202500225
+School Year: 2
+College:     CSAI
+Major:       IT
+Nationality: egyptian
+GPA:         3
+
+--------------------

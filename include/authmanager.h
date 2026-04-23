@@ -1,8 +1,10 @@
+#pragma once
 #include <iostream>
 #include "student.h"
 #include "professor.h"
 #include <fstream>
 #include "admin.h"
+#include "fileManagement.h"
 using namespace std;
 class authManager{
     private:
@@ -14,12 +16,16 @@ class authManager{
         void studentAuth(){
            
            Student student1 = Student();
+           SaveToFile(student1);
+
         }
         void profAuth(){
             Professor prof1 = Professor();
+            SaveToFile(prof1);
         }
         void adminAuth(){
             Admin admin1 = Admin();
+            SaveToFile(admin1);
         }
         void authsequence(){
             cout<< "Wilkommen"<<endl;

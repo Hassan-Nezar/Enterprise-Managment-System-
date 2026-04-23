@@ -1,5 +1,4 @@
-#ifndef USER_H
-#define USER_H
+#pragma once
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -8,7 +7,7 @@ using namespace std;
 class user {
     protected:
         string u_name;
-        string u_id;
+        int u_id;
         int u_age;
         string u_bio;
         int maxCapacity;
@@ -31,4 +30,3 @@ class user {
           
 };
 
-#endif
